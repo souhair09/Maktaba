@@ -64,4 +64,7 @@ class BookRepository {
     fun getBookByIsbn(isbn: String): Book? {
         return booksList.find { it.isbn == isbn }
     }
+    fun getLongBooks(): List<Book> {
+        return booksList.filter { it.nbPages > 400 }
+    }
 }
